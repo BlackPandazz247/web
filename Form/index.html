@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form di registrazione</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <h2>Registrazione utente</h2>
+  
+  <div class="registrazione">
+    <form method="post" action="registrazione.php">
+    <div class="caselleDiInput">
+      <label for="cognome">Cognome:</label>
+      <br>
+      <input type="text" id="cognome" name="cognome" placeholder="inserisci nome" required>
+      <br>
+      <br>
+      <label for="nome">Nome:</label>
+      <br>
+      <input type="text" id="nome" name="nome" placeholder="inserisci cognome" required>
+      <br>
+      <br>
+      <label for="matricola">Matricola:</label>
+      <br>
+      <input type="text" id="matricola" name="matricola" placeholder="inserisci matricola" required>
+      <br>
+      <br>
+      <label for="regione">Regione di residenza:</label>
+      <br>
+      <select id="regione" name="regione" required>
+        <option value="abruzzo">Abruzzo</option>
+        <option value="basilicata">Basilicata</option>
+        <option value="calabria">Calabria</option>
+        <option value="campania">Campania</option>
+        <option value="emiliaRomagna">Emilia-Romagna</option>
+        <option value="friuliVeneziaGiulia">Friuli Venezia Giulia</option>
+        <option value="lazio">Lazio</option>
+        <option value="liguria">Liguria</option>
+        <option value="lombardia">Lombardia</option>
+        <option value="marche">Marche</option>
+        <option value="molise">Molise</option>
+        <option value="piemonte">Piemonte</option>
+        <option value="puglia">Puglia</option>
+        <option value="sardegna">Sardegna</option>
+        <option value="sicilia">Sicilia</option>
+        <option value="toscana">Toscana</option>
+        <option value="trentinoAltoAdige">Trentino-Alto Adige</option>
+        <option value="umbria">Umbria</option>
+        <option value="valle_dAosta">Valle d'Aosta</option>
+        <option value="veneto">Veneto</option>
+        <option value="estero">Residente all'estero</option>
+      </select>
+      <br>
+      <br>
+      <label for="email">Email:</label>
+      <br>
+      <input type="email" id="email" name="email" placeholder="francescorossi@gmail.com" required multiple>
+      <br>
+      <br>
+      <label for="telefono">Telefono Cellulare:</label>
+      <br>
+      <input type="tel" id="telefono" name="telefono" placeholder="+39 123 456 7890" pattern="+[0-9]{2}-[0-9]{3}-[0-9]{3}-[0-9]{4}">
+      <br>
+      <br>
+      <label for="username">Nome utente:</label>
+      <br>
+      <input type="text" id="username" name="username" required>
+      <br>
+      <br>
+      <label for="password">Password:</label>
+      <br>
+      <input type="password" id="password" name="password">
+      <br>
+      <br>
+    </div>
+    <div class="pulsanti">
+      <input type="submit" value="Registrati">
+      <input type="reset">
+      <br>
+    </div>
+    </form>
+  </div>  
+</body>
+</html>
