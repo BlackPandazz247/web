@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form di registrazione</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <h2>Questionario</h2>
+
+  <div class="registrazione">
+    <form method="post" action="registrazione.php">
+      <div class="DatiPersonali">
+        <label for="nome">Nome:&emsp;</label>
+        <input type="text" id="nome" name="nome" placeholder="inserisci nome" required>
+        <br>
+        <label for="cognome">Cognome:&emsp;</label>
+        <input type="text" id="cognome" name="cognome" placeholder="inserisci cognome" required>
+        <br>
+        <label for="eta">Età:&emsp;</label>
+        <input type="text" id="eta" name="eta" placeholder="inserisci eta" required>
+        <br>
+        <label for="provincia">Provincia di provenienza:&emsp;</label>
+        <select id="provincia" name="provincia" required>
+          <option value="chieti">Chieti</option>
+          <option value="pescara">Pescara</option>
+          <option value="teramo">Teramo</option>
+          <option value="laquila">L'aquila</option>
+        </select>
+        <br>
+        <label for="comune">Comune di provenienza:&emsp;</label>
+        <input type="text" id="comune" name="comune" placeholder="inserisci comune" required>
+        <br>
+        <label for="scuola">Scuola media frequentata:&emsp;</label>
+        <input type="text" id="scuola" name="scuola" placeholder="inserisci nome scuola" required>
+      </div>
+      <br>
+      <br>
+      <div class="questionario">
+        <label for="conoscenza">Come sei venuto a conoscenza di Scuola Aperta?</label>
+        <br>
+        <input type="radio" id="amico" name="conoscenza" value="amico">
+        <label for="amico">Tramite un amico</label>
+        <br>
+        <input type="radio" id="docente" name="conoscenza" value="docente">
+        <label for="docente">Tramite un docente</label>
+        <br>
+        <input type="radio" id="giornale" name="conoscenza" value="giornale">
+        <label for="giornale">Tramite il giornale</label>
+        <br>
+        <input type="radio" id="internet" name="conoscenza" value="internet">
+        <label for="internet">Su internet</label>
+        <br>
+        <input type="radio" name="conoscenza">
+        <label for="altro">Tramite un amico (specificare&ensp;
+        <input type="text" id="altro" name="conoscenza" required>)
+        </label>
+        <br>
+        <label for="conoscenza">A quale specializzazione sei più interessato?</label>
+        <br>
+        <input type="checkbox" id="chimica" name="specializzazione" value="chimica">
+        <label for="chimica">Chimica</label>
+        <br>
+        <input type="checkbox" id="meccanica" name="specializzazione" value="meccanica">
+        <label for="meccanica">Meccanica</label>
+        <br>
+        <input type="checkbox" id="informatica" name="specializzazione" value="informatica">
+        <label for="informatica">Informatica</label>
+        <br>
+        <input type="checkbox" id="elettrotecnica" name="specializzazione" value="elettrotecnica">
+        <label for="elettrotecnica">Elettrotecnica</label>
+        <br>
+        <input type="checkbox" id="trasporti" name="specializzazione" value="trasporti e logistica">
+        <label for="trasporti">Trasporti e logistica</label>
+        <br>
+        <p><img src="captcha.php"></p>
+        <label>CAPTCHA</label>
+        <input type="text" name="captcha">
+      </div>
+      <div class="pulsanti">
+        <input type="submit" value="Invia">
+        <input type="reset">
+        <br>
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>
