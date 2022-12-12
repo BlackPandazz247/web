@@ -6,7 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Form di registrazione</title>
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -14,8 +13,10 @@
   <h2>Questionario</h2>
 
   <div class="registrazione">
-    <form method="post" action="registrazione.php">
+    <form method="post" action="table.php">
       <div class="DatiPersonali">
+      <fieldset>
+        <legend>Dati personali: </legend>
         <label for="nome">Nome:&emsp;</label>
         <input type="text" id="nome" name="nome" placeholder="inserisci nome" required>
         <br>
@@ -38,11 +39,14 @@
         <br>
         <label for="scuola">Scuola media frequentata:&emsp;</label>
         <input type="text" id="scuola" name="scuola" placeholder="inserisci nome scuola" required>
+      </fieldset>
       </div>
       <br>
       <br>
       <div class="questionario">
-        <label for="conoscenza">Come sei venuto a conoscenza di Scuola Aperta?</label>
+      <fieldset>
+        <legend>Informazioni generali: </legend>
+        <label>Come sei venuto a conoscenza di Scuola Aperta?</label>
         <br>
         <input type="radio" id="amico" name="conoscenza" value="amico">
         <label for="amico">Tramite un amico</label>
@@ -56,12 +60,11 @@
         <input type="radio" id="internet" name="conoscenza" value="internet">
         <label for="internet">Su internet</label>
         <br>
-        <input type="radio" name="conoscenza">
-        <label for="altro">Tramite un amico (specificare&ensp;
-        <input type="text" id="altro" name="conoscenza" required>)
-        </label>
+        <input type="radio" id="altro" name="conoscenza" value="altro">
+        <label for="altro">Altro (specificare)</label>
+        <input type="text" id="specifica" name="specifica">
         <br>
-        <label for="conoscenza">A quale specializzazione sei più interessato?</label>
+        <label>A quale specializzazione sei più interessato?</label>
         <br>
         <input type="checkbox" id="chimica" name="specializzazione" value="chimica">
         <label for="chimica">Chimica</label>
@@ -78,12 +81,13 @@
         <input type="checkbox" id="trasporti" name="specializzazione" value="trasporti e logistica">
         <label for="trasporti">Trasporti e logistica</label>
         <br>
-        <p><img src="captcha.php"></p>
+        <p><img src="./captcha.php"></p>
         <label>CAPTCHA</label>
-        <input type="text" name="captcha">
+        <input type="text" id="captcha" name="captcha" required>
+      </fieldset>
       </div>
       <div class="pulsanti">
-        <input type="submit" value="Invia">
+        <input type="submit" name="submit" value="Invia">
         <input type="reset">
         <br>
       </div>
