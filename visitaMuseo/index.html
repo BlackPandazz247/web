@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form di registrazione</title>
+</head>
+
+<body>
+  <h2>Registrazione utente</h2>
+  
+    <form method="post" action="./registrazione.php">
+        <label for="cognome">Cognome:</label>
+        <br>
+        <input type="text" id="cognome" name="cognome" placeholder="Inserisci cognome" required>
+        <br>
+        <br>
+        <label for="nome">Nome:</label>
+        <br>
+        <input type="text" id="nome" name="nome" placeholder="Inserisci nome" required>
+        <br>
+        <br>
+        <label for="user">Nome utente:</label>
+        <br>
+        <input type="text" id="user" name="user" placeholder="Inserisci nome utente" required>
+        <br>
+        <br>
+        <label for="email">Email:</label>
+        <br>
+        <input type="email" id="email" name="email" placeholder="francescorossi@gmail.com" required>
+        <br>
+        <br>
+        <label for="telefono">Telefono Cellulare:</label>
+        <br>
+        <input type="tel" id="telefono" name="telefono" placeholder="123-456-7898" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+        <br>
+        <br>
+        <label for="citta">Città di provenienza:</label>
+        <br>
+        <input type="text" id="citta" name="citta" placeholder="Inserisci citta" required>
+        <br>
+        <br>
+        <label for="provincia">Provincia di provenienza:</label>
+        <br>
+        <input type="text" id="provincia" name="provincia" placeholder="Inserisci provincia" required>
+        <br>
+        <br>
+        <label for="password">Password:</label>
+        <br>
+        <input type="password" id="password" name="password" minlength="8" required pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}">
+        <br>
+        <br>
+        <label for="conferma_password">Conferma password:</label>
+        <br>
+        <input type="password" id="conferma_password" name="conferma_password" minlength="8" required pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}">
+        <br>
+        <br>
+        <p><img src="./captcha.php" alt="captcha"></p>
+        <br>
+        <label for="captcha">Inserisci il codice captcha:</label>
+        <br>
+        <input type="text" name="captcha" id="captcha" required>
+        <br>
+        <br>
+        <input type="submit" name="submit" value="Registrati">
+        <input type="reset">
+        <br>
+    </form>
+</body>
+</html>
