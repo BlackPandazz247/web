@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: #dee;
+    overflow-x: hidden; 
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    padding: 10px;
+    color: #444;
+}
+
+.registrazione {
+    width: 100%;
+    background-color: #d3d4d4;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: auto;
+    max-width: 600px;
+    font-size: 1rem;
+    position: relative;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.DatiPersonali {
+    padding: 20px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.DatiPersonali input, .DatiPersonali select {
+    padding: 10px;
+    width: 95%;
+    margin-bottom: 10px;
+    border: 1.7px solid #b0b0b0;
+    border-radius: 5px;
+    font-size: 1rem;
+    height: 40px;
+}
+
+.questionario {
+    padding: 20px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.questionario input[type="text"] {
+    padding: 10px;
+    width: 95%;
+    margin-bottom: 10px;
+    border: 1.7px solid #b0b0b0;
+    border-radius: 5px;
+    font-size: 1rem;
+    height: 40px;
+}
+
+.pulsanti {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.pulsanti input {
+    padding: 10px;
+    width: 48%;
+    margin-bottom: 10px;
+    border: 1.7px solid #b0b0b0;
+    border-radius: 5px;
+    font-size: 1rem;
+    height: 40px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+    .registrazione {
+        width: 100%;
+        max-width: 100%;
+    }
+    .DatiPersonali {
+        padding: 10px;
+        margin: 10px;
+    }
+    .questionario {
+        padding: 10px;
+        margin: 10px;
+    }
+    .pulsanti {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    .pulsanti input[type="submit"], .pulsanti input[type="reset"] {
+        width: 90%;
+    }
+}
